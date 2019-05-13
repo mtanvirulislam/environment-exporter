@@ -1,0 +1,33 @@
+------------------------------[ mtanvirul : /bin/bash ]------------------------------
+LC_MEASUREMENT=es_ES.UTF-8
+M2_HOME=/opt/maven
+LC_PAPER=es_ES.UTF-8
+LC_MONETARY=es_ES.UTF-8
+LANG=en_US.UTF-8
+DISPLAY=:0
+COLORTERM=truecolor
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+J2SDKDIR=/usr/lib/jvm/java-8-oracle
+LC_NAME=es_ES.UTF-8
+DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+USER=mtanvirul
+PWD=/home/mtanvirul
+HOME=/home/mtanvirul
+J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+LIBVIRT_DEFAULT_URI=qemu:///system
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+LC_ADDRESS=es_ES.UTF-8
+LC_NUMERIC=es_ES.UTF-8
+MAIL=/var/mail/mtanvirul
+SHELL=/bin/bash
+TERM=xterm-256color
+SHLVL=1
+LC_TELEPHONE=es_ES.UTF-8
+LOGNAME=mtanvirul
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+PATH=/opt/maven/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+LC_IDENTIFICATION=es_ES.UTF-8
+LC_TIME=es_ES.UTF-8
+_=/usr/bin/env
+-------------------------------------[ FIN ]-------------------------------------
+
