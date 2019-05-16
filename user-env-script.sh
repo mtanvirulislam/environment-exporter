@@ -4,15 +4,6 @@
 # Author: Mohammed Tanvirul Islam
 ################################################################
 
-_login="/etc/login.defs"
-_passwd="/etc/passwd"
-
-## get min UID limit ##
-min_uid=$(grep "^UID_MIN" $_login)
-
-## get max UID limit ##
-max_uid=$(grep "^UID_MAX" $_login)
-
 ## Files name ##
 file_excel="users_env_$(hostname).xls"
 file_txt="users_env_$(hostname).txt"
@@ -31,16 +22,20 @@ else
 fi
 echo -e '\n'"Folder created: " $(pwd)/$folder_name'\n'
 
+
 ## write header to excel and csv ##
 #echo -e "user" '\t' "shell" '\t' "variables" >> ./$folder_name/$file_txt
 echo -e "user" '\t' "shell" '\t' "variables" >> ./$folder_name/$file_excel
-echo -e "user,shell,variables" >> ./$folder_name/$file_csv
+echo -e "user, shell, variables" >> ./$folder_name/$file_csv
 
-## use awk to print if UID >= $MIN and UID <= $MAX and shell is not /sbin/nologin   ##
-for user in $(awk -F':' -v "min=${min_uid##UID_MIN}" -v "max=${max_uid##UID_MAX}" '{ if ( $3 >= min && $3 <= max  && $7 != "/sbin/nologin" ) print $1 }' "$_passwd"); do
+## Get all users name name starts with UE ##
+users=$(ls -l /home/ | grep "^d" | awk -F" " '{print $9}')
+
+## Write to files ##
+for user in $users; do
 
   echo $user " >> " $file_txt, $file_excel, $file_csv
-  user_shell=$(getent passwd $user | awk -F':' '{ print $NF}')
+  user_shell=$(su - $user -c env | grep "SHELL=" | awk -F "SHELL=" '{print $2}')
 
   ## Write to text file ##
   echo "------------------------------[ $user : $user_shell ]------------------------------">> ./$folder_name/$file_txt
