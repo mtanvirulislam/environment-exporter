@@ -1,0 +1,17 @@
+user 	 shell 	 variables
+mtanvirulislam 	 /bin/bash 	 SHELL=/bin/bash
+ 	  	 JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/
+ 	  	 PWD=/home/mtanvirulislam
+ 	  	 LOGNAME=mtanvirulislam
+ 	  	 HOME=/home/mtanvirulislam
+ 	  	 LANG=es_ES.UTF-8
+ 	  	 TERM=xterm-256color
+ 	  	 USER=mtanvirulislam
+ 	  	 SHLVL=0
+ 	  	 XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+ 	  	 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 	  	 MAIL=/var/mail/mtanvirulislam
+ 	  	 _=/usr/bin/env
+
+
+
